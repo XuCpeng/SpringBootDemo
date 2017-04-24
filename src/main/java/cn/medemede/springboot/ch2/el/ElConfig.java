@@ -15,7 +15,7 @@ import java.io.IOException;
 
 @Configuration
 @ComponentScan("cn.medemede.springboot.ch2.el")
-@PropertySource("classpath:cn/medemede/springboot/ch2/el/test.txt")
+@PropertySource("classpath:cn/medemede/springboot/ch2/el/test.properties")
 public class ElConfig {
     @Value("I Love You!")
     private String normal1;
@@ -50,7 +50,7 @@ public class ElConfig {
         return new PropertySourcesPlaceholderConfigurer();
     }
 
-    public void outputResource(){
+    void outputResource(){
         try {
             System.out.println(normal1);
             System.out.println(osName);
